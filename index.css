@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    font-family: 'ZCOOL XiaoWei', serif;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(108, 199, 226);
+    background-color: rgb(54, 52, 52);
+}
+.menu div {
+    align-self: center;
+
+}
+.titre {
+    font-family: 'ZCOOL XiaoWei', serif;
+    margin-left: 50px;
+}
+.connexion {
+    font-family: 'ZCOOL XiaoWei', serif;
+    margin-right: 50px;
+    display: flex;
+    gap: 10px;
+}
+.login {
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: rgb(108, 199, 226);
+    background-color: rgb(54, 52, 52);
+    height: 50px;
+}
+.logout {
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: rgb(108, 199, 226);
+    background-color: rgb(54, 52, 52);
+    height: 50px;
+}
+.onlinemembers {
+    font-family: 'ZCOOL XiaoWei', serif;
+    background-color: black;
+    display: flex;
+    width: 15%;
+    height: 700px;
+    overflow-y: scroll;
+}
+.onlinemembers h3 {
+    color: rgb(108, 199, 226);
+    margin-left: 25px;
+}
+.footer {
+    font-family: 'ZCOOL XiaoWei', serif;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(54, 52, 52);
+    color: rgb(108, 199, 226);
+}
+.copyright {
+    margin-left: 50px;
+}
+.auteur {
+    margin-right: 50px;
+}
+.sortietexte {
+    background-color: rgb(150, 147, 147);
+    height: 600px;
+}
+.entreetexte {
+    background-color: rgb(82, 79, 79);
+    height: 100px;
+    display: flex;
+}
+.flexmilieudepage {
+    display: flex;
+}
+.entreesortie {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+.lignetexte {
+    background-color: rgb(172, 121, 121);
+    color: rgb(59, 49, 51);
+    font-size: 20px;
+}
+.ligneuser {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding: 5px;
+}
+.onlinemembers {
+    display: flex;
+    flex-direction: column;
+}
