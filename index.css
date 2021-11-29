@@ -93,3 +93,29 @@ body {
     display: flex;
     flex-direction: column;
 }
+.flexspace {
+    display: flex;
+    justify-content: space-between;
+}
+.messageall {
+    background-color: rgb(78, 14, 78);
+    margin-top: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.colorusurname {
+    color: rgb(240, 4, 4);
+    padding-left: 25px;
+}
+.colordate {
+    color: yellow;
+    padding-right: 25px;
+}
+.colormessage {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}

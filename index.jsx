@@ -4,6 +4,16 @@
 // 4 : EntreeTexte
 // 5 : SortieTexte
 // 6 : Footer
+let ws = new WebSocket('ws://localhost:8124/')
+ws.onopen = () => {
+  console.log("connect ok");
+}
+
+ws.onerror = (err) => {
+  console.log(err);
+}
+    
+
 function Menu(props) {
     let con
     if(props.isconnected==false) {
@@ -50,7 +60,18 @@ function SortieTexte(props) {
         GrabTexte=<React.Fragment>{props.tabmessage.map((elem, key)=><div className="lignetexte">{elem}</div>)}</React.Fragment>
     }
     return (
-        <div className="sortietexte">{GrabTexte}</div>
+        <div className="sortietexte">{props.tabmessage.map((elem, key) => <TurfuTexte key={key} obj={elem} />)}</div>
+    )
+}
+function TurfuTexte(props) {
+    return(
+        <div className="messageall">
+            <div className="flexspace">
+            <div className="colorusurname">{props.obj.user}</div>
+            <div className="colordate">{props.obj.date.toLocaleTimeString()}</div>
+            </div>
+            <div className="colormessage">{props.obj.message}</div>
+        </div>
     )
 }
 function EntreeTexte(props) {
@@ -101,7 +122,7 @@ class Global_Tchat extends React.Component {
         this.setState({texte: event.target.value})
     }
     envoiemessage(event){
-        this.setState({tabmessage: [...this.state.tabmessage, this.state.texte]})
+        this.setState({tabmessage: [...this.state.tabmessage,{user:this.state.login, date:new Date(), message:this.state.texte}]})
         this.setState({texte: ""})
     }
     render() {
